@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zeel's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      background: #0e0e0e;
+      color: #e0e0e0;
+      font-family: 'Source Code Pro', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      padding: 20px;
+    }
+    .content {
+      max-width: 600px;
+      background: #161616;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      animation: fadeIn 1.2s ease;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+      margin: 12px 0;
+      line-height: 1.6;
+    }
+    a {
+      display: block;
+      margin-top: 10px;
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #datetime {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+<body>
+
+<div id="datetime"></div>
+
+<div class="content">
+    <h1>Hi, I'm Zeel! 👋</h1>
+    <!-- <p>Hi, I'm Zeel! 👋</p> -->
+    <a href="https://github.com/Zeel0725" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/zeel2212/" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/z.e.e.l_/" target="_blank">Instagram</a>
+    <a href="https://x.com/zeel_ai" target="_blank">X (Twitter)</a>
+    <!-- <a href="https://www.kaggle.com/zeel0725" target="_blank">Kaggle</a> -->
+</div>
+
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const formatted = now.toLocaleString('en-GB', { hour12: false });
+    document.getElementById('datetime').textContent = formatted;
+  }
+  updateDateTime();
+  setInterval(updateDateTime, 1000); // updates every second
+</script>
+
+</body>
+</html>
