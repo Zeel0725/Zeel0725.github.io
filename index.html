@@ -156,13 +156,6 @@
                 height: 20px;
             }
         }
-        #datetime {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 14px;
-            color: #aaaaaa;
-        }
     </style>
 </head>
 <body>
@@ -175,12 +168,12 @@
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
-        <div class="particle"></div>
+        <div class="particle"></div> 
     </div>
 
     <div class="container">
         <div class="profile-card">
-            <h1 class="name">Hi, I'm Zeel! 👋</h1>
+            <h1 class="name">Hi,I'm Zeel! 👋</h1>
             <p class="tagline">   </p>
             
             <div class="social-links">
@@ -216,15 +209,6 @@
     </div>
 
     <script>
-
-        function updateDateTime() {
-            const now = new Date();
-            const formatted = now.toLocaleString('en-GB', { hour12: false });
-            document.getElementById('datetime').textContent = formatted;
-        }
-        updateDateTime();
-        setInterval(updateDateTime, 1000); // updates every second
-
         // Add smooth parallax effect to particles
         document.addEventListener('mousemove', (e) => {
             const particles = document.querySelectorAll('.particle');
