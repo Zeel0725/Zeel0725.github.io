@@ -218,10 +218,10 @@
     <script>
 
         function updateDateTime() {
-        const now = new Date();
-        const formatted = now.toLocaleString('en-GB', { hour12: false });
-        document.getElementById('datetime').textContent = formatted;
-  }
+            const now = new Date();
+            const formatted = now.toLocaleString('en-GB', { hour12: false });
+            document.getElementById('datetime').textContent = formatted;
+        }
         updateDateTime();
         setInterval(updateDateTime, 1000); // updates every second
 
